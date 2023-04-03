@@ -1,0 +1,40 @@
+{%extends "base.html"%}
+
+{%block content%}
+
+<html lang="en">
+    <div class="container mt-5" xmlns="http://www.w3.org/1999/html">
+        <h3 class='display-4'>Facial Detection Web APP</h3>
+        <br>
+        <h4>Select a Image</h4>
+        <form name='frm' method='POST' action="{{url_for('predict')}}" enctype='multipart/form-data'>
+
+            <div class="form-group">
+                    <div class="btn btn-secondary">
+                        <input type="file" name="select_file">
+                    </div>
+            </div>
+
+            <input type="submit" name="btn" class='btn btn-outline-secondary'>
+        </form>
+        <br>
+        <br>
+        <p>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+            <i class='fa fa-github fa-2x'></i>
+            <a href="https://github.com/Pengyu-gis">GitHub Code</a>
+        </p>
+        <br>
+        <p>
+            <i class='fab fa-kaggle'></i>
+            <a href="https://www.kaggle.com/datasets/ahmedmoorsy/facial-expression">Kaggle Dataset</a>
+        </p>
+        <br>
+        <br>
+        <h3 class='display-10'>Architecture</h3>
+        <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*i_lR-QwEN9rFW7DcMN4h2A.png" class="img-fluid" alt="200">
+
+    </div>
+</html>
+
+{%endblock%}
